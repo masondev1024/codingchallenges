@@ -16,34 +16,6 @@
  ┗ 📜 submit.sh   ← 자동 커밋 스크립트
 ```
 
-## 🚀 사용법
-
-### 1단계: 처음 설정 (한 번만)
-```bash
-git clone https://github.com/masondev1024dev1024/programmers.git
-cd programmers
-chmod +x submit.sh
-```
-
-### 2단계: 문제 풀기
-```bash
-# 파일 자동 생성
-./submit.sh "문제이름" 레벨
-
-# 예시
-./submit.sh "두_정수_사이의_합" 1
-```
-
-### 3단계: 풀이 작성 후 커밋
-```bash
-# Level1/두_정수_사이의_합.py 파일에 풀이 작성 후
-./submit.sh "두_정수_사이의_합" 1
-```
-
-→ 자동으로 `git add` → `git commit` → `git push` 완료! 🌱
-
----
-
 ## 📊 진행 현황
 
 | 레벨 | 문제 수 |
