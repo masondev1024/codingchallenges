@@ -50,6 +50,8 @@ chmod +x submit.sh
 |------|--------|
 | Level 0 | 0 |
 | Level 1 | 0 |
-| Level 2 | 0 |
+| Level 2 | 3 |
 | Level 3 | 0 |
 | Level 4 | 0 |
+
+> 총 **3**문제 풀이 완료 🎉
