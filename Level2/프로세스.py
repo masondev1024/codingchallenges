@@ -15,3 +15,12 @@ def solution(priorities, location):
             answer += 1
             if current[1] == location:
                 return answer
+            
+
+import math
+
+def solution(progresses, speeds):
+    answer =[]
+    finish = [math.ceil((100-progresses[0])/speeds) for progress, speeds in zip(progresses,speeds)]
+    print(finish)
+solution([1,3,4,5],[3,4,5,6])
