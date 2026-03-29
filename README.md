@@ -13,7 +13,7 @@
  ┣ 📂 Level2
  ┣ 📂 Level3
  ┣ 📂 Level4
- ┗ 📜 submit.sh   ← 자동 커밋 스크립트
+ ┗ 📜 submit.sh   
 ```
 
 ## 📊 진행 현황
