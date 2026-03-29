@@ -2,7 +2,6 @@
 
 # ✅ 프로그래머스 풀이 자동 커밋 스크립트
 # 사용법: ./submit.sh "문제이름" [레벨]
-# 예시:  ./submit.sh "두_정수_사이의_합" 1
 
 PROBLEM_NAME=$1
 LEVEL=${2:-0}
@@ -36,6 +35,9 @@ EOF
   exit 0
 fi
 
+# pull 먼저 (충돌 방지)
+git pull origin main --no-rebase
+
 # git add & commit & push
 DATE=$(date +"%Y-%m-%d %H:%M")
 COMMIT_MSG="[Level${LEVEL}] ${PROBLEM_NAME} - ${DATE}"
@@ -43,7 +45,3 @@ COMMIT_MSG="[Level${LEVEL}] ${PROBLEM_NAME} - ${DATE}"
 git add "$FILE_PATH"
 git commit -m "$COMMIT_MSG"
 git push origin main
-
-echo ""
-echo "🌱 잔디 심기 완료!"
-echo "   커밋: ${COMMIT_MSG}"
