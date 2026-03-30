@@ -45,3 +45,7 @@ COMMIT_MSG="[Level${LEVEL}] ${PROBLEM_NAME} - ${DATE}"
 git add "$FILE_PATH"
 git commit -m "$COMMIT_MSG"
 git push origin main
+
+echo ""
+echo "🌱 잔디 심기 완료!"
+echo "   커밋: ${COMMIT_MSG}"

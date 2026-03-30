@@ -16,11 +16,39 @@ def solution(priorities, location):
             if current[1] == location:
                 return answer
             
+from collections import deque
 
-import math
+def solution(priorities, location):
+    q = deque([(idx,pr) for idx, pr in enumerate(priorities)])
+    order = 0
+    while q:
+        current = q.popleft()
+        if any(current[1] < pr for _ ,pr in q):
+            q.append(current)
+        else:
+            order+=1
+            if current[0] == location:
+                return order
+        
+            
+# 내 풀이 
+# from collections import deque
 
-def solution(progresses, speeds):
-    answer =[]
-    finish = [math.ceil((100-progresses[0])/speeds) for progress, speeds in zip(progresses,speeds)]
-    print(finish)
-solution([1,3,4,5],[3,4,5,6])
+# def solution(priorities, location):
+#     answer=[]
+#     q= deque(priorities)
+#     for idx, pr in enumerate(q):
+#         if len(answer) ==0 :
+#             q.popleft()
+#             answer.append((idx,pr))
+#             continue         
+#         if answer[0][1] >= pr:
+#             q.popleft()
+#             answer.append((idx,pr))
+#         else:
+#             q.popleft()
+#             answer.insert((idx,pr))
+#     for  idx , e in answer:
+#         if idx == location:
+#             return e
+            
