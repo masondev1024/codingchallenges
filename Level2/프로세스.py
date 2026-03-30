@@ -2,6 +2,7 @@
 # 레벨: lv2
 # 날짜: 2026-03-28
 
+# 다른 사람 풀이
 from collections import deque
 
 def solution(priorities, location):
@@ -9,13 +10,14 @@ def solution(priorities, location):
     answer = 0
     while queue:
         current = queue.popleft() 
-        if any(current[0] < q[0] for q in queue):
+        if any(current[0] < q[0] for q in queue): # 스택을 쌓을때 뒤에 붙이는건 append로 할 수 있는데 앞에 붙이고 싶을 때 
             queue.append(current)
         else: 
             answer += 1
             if current[1] == location:
                 return answer
             
+# 내가 풀이한 것
 from collections import deque
 
 def solution(priorities, location):
