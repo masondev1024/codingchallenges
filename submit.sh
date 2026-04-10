@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# ✅ 프로그래머스 풀이 자동 커밋 스크립트
-# 사용법: ./submit.sh "문제이름" [레벨]
-
 PROBLEM_NAME=$1
 LEVEL=${2:-0}
 
