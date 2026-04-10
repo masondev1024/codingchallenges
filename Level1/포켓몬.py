@@ -1,7 +1,3 @@
-# 프로그래머스 - 포켓몬
-# 레벨: 1
-# 날짜: 2026-03-31
-
 from collections import Counter
 def solution(nums):
     answer = 0

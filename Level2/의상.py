@@ -1,6 +1,3 @@
-# 프로그래머스 - 의상
-# 레벨: 2
-# 날짜: 2026-03-31
 
 # 1차 내 풀이
 from collections import Counter
@@ -42,14 +39,14 @@ def solution(clothes):
     answer = 1
     for val in d.values():
         answer *= (val+1)
-    return answer-1
+    return answer-1 # 둘다 안입는 경우는 빼야 하기 때문에 -1
 
 # 다른 사람 풀이 (정석 해시 함수 풀이)
 def solution(clothes):
     clothes_type = {}
 
     for c, t in clothes:
-        if t not in clothes_type:
+        if t not in clothes_type: # 딕셔너리의 제일 중요한 특징 : for문 에서 딕셔너리는 처음부터 끝까지 돌아가는 o(n)이 아닌 키값을 통해 원하는 값만 찾는 o(1)
             clothes_type[t] = 2
         else:
             clothes_type[t] += 1

@@ -1,6 +1,3 @@
-# 프로그래머스 - 프로세
-# 레벨: lv2
-# 날짜: 2026-03-28
 
 # 다른 사람 풀이
 from collections import deque

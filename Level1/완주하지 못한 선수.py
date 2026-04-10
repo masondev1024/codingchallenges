@@ -1,7 +1,3 @@
-# 프로그래머스 - 완주하지 못한 선수
-# 레벨: 1
-# 날짜: 2026-03-31
-
 from collections import Counter
 
 def solution(participant, completion):

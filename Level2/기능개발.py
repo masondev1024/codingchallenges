@@ -1,7 +1,3 @@
-# 프로그래머스 - 기능개발
-# 레벨: 2
-# 날짜: 2026-03-29
-
 import math
 
 def solution(progresses, speeds):
