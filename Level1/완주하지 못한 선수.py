@@ -17,7 +17,7 @@ def solution(participant, completion): # Dictionary(Hash Table) 직접 사용
         # 만약 여기서 get()가 아니라 [key]를 통해 value를 가져오면 participant에 없는 키값을 넣으면 Error가 발생, get()는 None을 출력
         # get() 메서드는 키가 없을 때 반환할 기본값(0)을 설정
     
-    #완주자 이름을 키로 하여 해당되는 value에 -1 한 값 저장
+    #완주자 이름을 키로 하여 해당되는 value에 -1 한 값 저장
     for c in completion:
         hash_dict[c] -= 1
 
