@@ -41,18 +41,13 @@ def solution(clothes):
         answer *= (val+1)
     return answer-1 # 둘다 안입는 경우는 빼야 하기 때문에 -1
 
-# 다른 사람 풀이 (정석 해시 함수 풀이)
+# 해시함수로 다시 풀어본 결과
 def solution(clothes):
-    clothes_type = {}
-
-    for c, t in clothes:
-        if t not in clothes_type: # 딕셔너리의 제일 중요한 특징 : for문 에서 딕셔너리는 처음부터 끝까지 돌아가는 o(n)이 아닌 키값을 통해 원하는 값만 찾는 o(1)
-            clothes_type[t] = 2
-        else:
-            clothes_type[t] += 1
-
-    cnt = 1
-    for num in clothes_type.values():
-        cnt *= num
-
-    return cnt - 1
+    answer = 1
+    hash_set ={}
+    for _,v in clothes:
+        hash_set[v] = hash_set.get(v,0)+1
+    for i in hash_set.values():
+        answer *= i+1
+    
+    return answer-1
