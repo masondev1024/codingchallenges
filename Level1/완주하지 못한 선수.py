@@ -1,10 +1,16 @@
 from collections import Counter
 
 def solution(participant, completion):
-    answer = Counter(participant) - Counter(completion)
+    hash_dict={}
+    answer =[]
+    for p in participant:
+        hash_dict[p] = hash_dict.get(p,0) + 1
+    for c in completion:
+        hash_dict[c] -=1
     
-    return list(answer.keys())[0]
-
+    for key,v in hash_dict.items():
+        if v >0:
+            return key
 
 # 다른 풀이
 
