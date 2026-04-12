@@ -41,6 +41,34 @@ def solution(genres, plays):
             answer.append(song[1])
     return answer
     
+# 모범 답안
+from collections import Counter, defaultdict
+
+def solution(genres, plays):
+    answer = []
+    
+    # 1. 장르별 총 재생 수
+    genre_count = Counter()
+    for g, p in zip(genres, plays):
+        genre_count[g] += p
+    
+    # 2. 장르 정렬 (핵심)
+    sorted_gen = sorted(genre_count, key=lambda x: genre_count[x], reverse=True)
+    
+    # 3. 장르별 노래 정리
+    songs = defaultdict(list)
+    for i, (g, p) in enumerate(zip(genres, plays)):
+        songs[g].append((p, i))
+    
+    # 4. 장르별 정렬
+    for g in songs:
+        songs[g].sort(key=lambda x: (-x[0], x[1]))
+    
+    # 5. 최대 2개씩 담기
+    for g in sorted_gen:
+        answer.extend([idx for _, idx in songs[g][:2]])
+    
+    return answer
     
 
     
